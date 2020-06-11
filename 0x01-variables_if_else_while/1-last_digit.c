@@ -21,11 +21,11 @@ int main(void)
 
 	printf("Last digit of %d is %d and is ", n, d);
 
-		if (n > 5)
+		if (d > 5)
 		{
 			printf("greater than 5\n");
 		}
-		else if (n == 0)
+		else if (d == 0)
 		{
 			printf("0\n");
 		}
