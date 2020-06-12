@@ -9,10 +9,10 @@
 
 int main(void)
 {
-	int i;
+	int i = '0';
 	int f;
 
-	for (i = '0'; i <= '9'; i++)
+	while (i <= '9')
 	{
 		for (f = '0'; f <= '9'; f++)
 		{
@@ -28,8 +28,8 @@ int main(void)
 				}
 			}
 		}
+		i++;
 	}
 	putchar('\n');
-
 	return (0);
 }
