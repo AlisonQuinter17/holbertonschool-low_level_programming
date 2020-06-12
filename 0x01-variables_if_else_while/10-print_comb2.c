@@ -8,24 +8,26 @@
 
 int main(void)
 {
-	int i;
-	int f;
+	int i = '0';
 
-	for (i = '0'; i <= '9'; i++)
+	while (i <= '9')
 	{
-		for (f = '0'; f <= '9'; f++)
+		int c = '0';
+
+		while (c <= '9')
 		{
 			putchar(i);
-			putchar(f);
+			putchar(c);
 
-			if (i != '9' || f != '9')
+			if (i != '9' || c != '9')
 			{
 				putchar(',');
 				putchar(' ');
 			}
+			c++;
 		}
+		i++;
 	}
 	putchar('\n');
-
 	return (0);
 }
