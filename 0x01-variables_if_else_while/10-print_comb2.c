@@ -18,10 +18,11 @@ int main(void)
 			putchar(i);
 			putchar(f);
 
-			if (f != '9')
-
+			if (i != '9' || f != '9')
+			{
 				putchar(',');
-			putchar(' ');
+				putchar(' ');
+			}
 		}
 	}
 	putchar('\n');
