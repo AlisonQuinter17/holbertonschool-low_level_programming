@@ -2,7 +2,7 @@
 
 /**
  * print_last_digit - main function.
- * @i: Test character.
+ * @i: Number.
  *
  * Description: This function prints the last digit of a number.
  * Return: The value of the last digit.
