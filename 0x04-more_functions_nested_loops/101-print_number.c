@@ -10,9 +10,7 @@
 
 void print_number(int n)
 {
-	int i;
-	int r;
-	int p;
+	unsigned int i, p, r;
 
 	if (n < 0)
 	{
