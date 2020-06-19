@@ -21,15 +21,15 @@ void print_triangle(int size)
 			{
 
 				if (n < size - i - 1)
-					putchar(' ');
+					_putchar(' ');
 
 				else
-					putchar('#');
+					_putchar('#');
 
 			}
-			putchar('\n');
+			_putchar('\n');
 		}
 	}
 	else
-		putchar('\n');
+		_putchar('\n');
 }
