@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * main - main function.
+ * main - Main function.
  *
  * Description: This program prints the numbers from 1 to 100 but
  * for multiples of three print Fizz and for the multiples of five
