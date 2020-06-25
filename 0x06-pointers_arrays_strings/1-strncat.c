@@ -6,7 +6,7 @@
  * @dest: The destination.
  * @n: The number of bytes to copy.
  *
- * Description: This function concatenates two strings.
+ * Description: This function concatenates two strings with limiter n bytes.
  *
  * Return: The pointer to destination buffer.
  */
