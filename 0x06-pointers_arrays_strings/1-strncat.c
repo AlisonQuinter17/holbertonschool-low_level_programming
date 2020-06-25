@@ -26,7 +26,7 @@ char *_strncat(char *dest, char *src, int n)
 		i++;
 		r++;
 	}
-	/* dest[lens1 + i] = 0;*/
+	dest[lens1 + i] = 0;
 	return (dest);
 }
 
