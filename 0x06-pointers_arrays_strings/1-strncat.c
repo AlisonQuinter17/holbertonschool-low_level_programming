@@ -13,16 +13,20 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int lenght = _strlen(dest);
-	int i = 0;
-	int r = 0;
+	int lens1 = _strlen(dest);
+	int lens2 = _strlen(src);
+	int i = 0, r = 0;
 
-	while (r < n && src[r])
+	while (r < n)
 	{
-		dest[lenght + i] = src[r];
+		if (r > lens2)
+			break;
+
+		dest[lens1 + i] = src[r];
 		i++;
 		r++;
 	}
+	/* dest[lens1 + i] = 0;*/
 	return (dest);
 }
 
