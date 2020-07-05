@@ -11,36 +11,37 @@
 
 int _atoi(char *s)
 {
-	unsigned int count = 0, size = 0, oi = 0, pn = 1, m = 1, i;
+	unsigned int i = 0, z = 0, p = 0;
+	unsigned int h = 1, w = 1, n;
 
-	while (*(s + count) != '\0')
+	while (s[i])
 	{
-		if (size > 0 && (*(s + count) < '0' || *(s + count) > '9'))
+		if (z > 0 && (s[i] < '0' || s[i] > '9'))
 		{
 			break;
 		}
 
-		else if (*(s + count) == '-')
+		if (s[i] == '-')
 		{
-			pn *= -1;
+			h *= -1;
 		}
 
-		else if ((*(s + count) >= '0') && (*(s + count) <= '9'))
+		if ((s[i] >= '0') && (s[i] <= '9'))
 		{
-			if (size > 0)
+			if (z > 0)
 			{
-				m *= 10;
+				w *= 10;
 			}
-			size++;
+			z++;
 		}
-		count++;
+		i++;
 	}
 
-	for (i = count - size; i < count; i++)
+	for (n = i - z; n < i; n++)
 	{
-		oi = oi + ((*(s + i) - 48) * m);
-		m /= 10;
+		p = p + ((s[n] - 48) * w);
+		w /= 10;
 	}
 
-	return (oi * pn);
+	return (p * h);
 }
