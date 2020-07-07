@@ -23,7 +23,7 @@ char *create_array(unsigned int size, char c)
 		return (NULL);
 	}
 
-	while (n < size)
+	while (n < size + 1)
 	{
 		v[n] = c;
 		n++;
