@@ -17,14 +17,14 @@ char *create_array(unsigned int size, char c)
 
 	v = malloc(sizeof(char) * size);
 
-	if (size == NULL || !size)
+	if (size == 0 || !size)
 	{
 		return (NULL);
 	}
 
 	while (size--)
 	{
-		v[n] = c;
+		v[size] = c;
 	}
 	return (v);
 }
