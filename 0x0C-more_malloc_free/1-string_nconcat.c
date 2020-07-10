@@ -2,25 +2,27 @@
 
 /**
  * *string_nconcat - main function.
- * @s1: Pointer to the first string (Betty ).
- * @s2: Pointer to the second string (Holberton).
- * @n: Number.
+ * @s1: The first string.
+ * @s2: The second string.
+ * @n: This copy first n bytes of s2
  *
  * Description: This function concatenates two strings.
+ *
  * Return: The pointer to the concatenated string.
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int h = _strlen(s1), s = _strlen(s2);
+	unsigned int h, s, j = 0;
 	int i = 0, size;
-	unsigned int j = 0;
 	char *p;
 
-	if (!s1)
+	if (s1 == NULL)
 		s1 = "";
-	if (!s2)
+	if (s2 == NULL)
 		s2 = "";
+
+	h = _strlen(s1), s = _strlen(s2);
 
 	if (n >= s)
 		n = s;
@@ -47,7 +49,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		if (s2[j])
 			p[i] = s2[j];
-
 		i++, j++;
 	}
 	p[i] = '\0';
