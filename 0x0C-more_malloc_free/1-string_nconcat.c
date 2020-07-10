@@ -12,7 +12,7 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int h = _strlen(s1), s = _strlen(s2);
+	unsigned int h = _strlen(s1), s = _strlen(s2);
 	int i = 0, size;
 	unsigned int j = 0;
 	char *p;
@@ -33,15 +33,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	while (i < size - 1)
 	{
 		if (s1[i])
-		{
 			p[i] = s1[i];
-		}
+
 		else
-		{
 			break;
-		}
 		i++;
 	}
+
+	if (n >= s)
+		n = s;
 
 	while (j < n)
 	{
