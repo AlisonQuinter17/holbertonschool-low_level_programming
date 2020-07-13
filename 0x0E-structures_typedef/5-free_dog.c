@@ -3,7 +3,7 @@
 
 /**
  * free_dog - main function.
- * @d: Pointer to
+ * @d: Pointer to the struct.
  *
  * Description: This function frees the dogs.
  *
