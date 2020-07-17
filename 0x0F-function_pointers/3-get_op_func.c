@@ -2,11 +2,13 @@
 
 /**
  * get_op_func - main function
- * @s: String operator
+ * @s: String operator.
  *
- * Description: This function
+ * Description: This function selects the correct function to perform
+ * the operation asked by the user.
  *
- * Return: something.
+ * Return: A pointer to the function that corresponds to the operator
+ * given as a parameter.
  */
 
 int (*get_op_func(char *s))(int, int)
@@ -19,5 +21,14 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-	int i;
+	int i = 0;
+
+	while (i < 5)
+	{
+		if (*(ops[i].op) == *s)
+		{
+			return (op.f);
+		}
+	}
+	return (NULL);
 }
