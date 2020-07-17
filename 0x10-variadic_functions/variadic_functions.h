@@ -4,6 +4,7 @@
 /* Libraries */
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdarg.h>
 
 /* Prototypes */
 int _putchar(char c);
