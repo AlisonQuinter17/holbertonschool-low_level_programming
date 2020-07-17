@@ -12,5 +12,23 @@
 
 int sum_them_all(const unsigned int n, ...)
 {
+	va_list op;
+	int sum = 0, i = 0;
 
+	va_start(op, n);
+
+	if (n == 0)
+	{
+		return (0);
+	}
+
+	while (i < (int)n)
+	{
+		sum += va_arg(op, int);
+		i++;
+	}
+
+	va_end(op);
+
+	return (sum);
 }
