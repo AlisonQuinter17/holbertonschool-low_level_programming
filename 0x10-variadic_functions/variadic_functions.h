@@ -30,4 +30,12 @@ void print_strings(const char *separator, const unsigned int n, ...);
 
 void print_all(const char * const format, ...);
 
+void op_c(va_list p);
+
+void op_i(va_list p);
+
+void op_f(va_list p);
+
+void op_s(va_list p);
+
 #endif
