@@ -19,17 +19,11 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	va_start(st, n);
 
-	if (n < 1)
-	{
-		printf("\n");
-		return;
-	}
-
-	while (i < (int)n)
+	while (i < ((int) n))
 	{
 		container = va_arg(st, char*);
 
-		if (container == NULL)
+		if (!container)
 		{
 			printf("(nil)");
 		}
