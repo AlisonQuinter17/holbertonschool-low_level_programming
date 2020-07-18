@@ -16,13 +16,13 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	va_list st;
 	int i = 0;
 
-	va_start(st, n);
-
 	if (n < 1)
 	{
 		printf("\n");
 		return;
 	}
+
+	va_start(st, n);
 
 	while (i < (int)n)
 	{
