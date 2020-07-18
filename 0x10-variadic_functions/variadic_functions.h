@@ -15,7 +15,7 @@
 typedef struct tokens
 {
 	char *pm;
-	int (*f)(char*, va_list);
+	void (*f)(va_list p);
 } tokens_t;
 
 
