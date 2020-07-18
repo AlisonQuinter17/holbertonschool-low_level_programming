@@ -91,7 +91,7 @@ void op_i(va_list p)
 
 void op_f(va_list p)
 {
-	printf("%f", va_arg(p, double));
+	printf("%f", (float)va_arg(p, double));
 }
 
 
