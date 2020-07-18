@@ -105,5 +105,11 @@ void op_f(va_list p)
 
 void op_s(va_list p)
 {
-	printf("%s", va_arg(p, char*));
+	char *container = va_arg(p, char*);
+
+	switch ((int)(!container))
+	case 1:
+		container = "(nil)";
+
+	printf("%s", container);
 }
