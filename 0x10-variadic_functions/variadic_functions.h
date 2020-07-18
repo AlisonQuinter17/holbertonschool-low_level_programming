@@ -6,6 +6,19 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
+/**
+ * struct tokens - struct token.
+ *
+ * @pm: The parameters entered.
+ * @f: The base function.
+ */
+typedef struct tokens
+{
+	char *pm;
+	int (*f)(char*, va_list);
+} tokens_t;
+
+
 /* Prototypes */
 int _putchar(char c);
 
