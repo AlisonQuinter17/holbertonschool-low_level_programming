@@ -14,6 +14,7 @@ void print_all(const char * const format, ...)
 {
 	va_list u;
 	char *separator = ", ";
+	int i = 0, j;
 
 	tokens_t op[] = {
 		{"c", op_c},
@@ -22,8 +23,6 @@ void print_all(const char * const format, ...)
 		{"s", op_s},
 		{NULL, NULL}
 	};
-
-	int i = 0, j;
 
 	va_start(u, format);
 
@@ -106,9 +105,5 @@ void op_f(va_list p)
 
 void op_s(va_list p)
 {
-	if (p == NULL)
-	{
-		printf("(nil)");
-	}
 	printf("%s", va_arg(p, char*));
 }
