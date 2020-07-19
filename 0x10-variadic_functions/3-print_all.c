@@ -109,7 +109,9 @@ void op_s(va_list p)
 
 	switch ((int)(!container))
 	case 1:
+	{
 		container = "(nil)";
+	}
 
 	printf("%s", container);
 }
