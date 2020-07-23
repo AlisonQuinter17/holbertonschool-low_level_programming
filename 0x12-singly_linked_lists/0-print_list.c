@@ -33,7 +33,7 @@ int _strlen(char *s)
 {
 	int i = 0;
 
-	while (s == '\0')
+	while (s == NULL)
 	{
 		return (0);
 	}
