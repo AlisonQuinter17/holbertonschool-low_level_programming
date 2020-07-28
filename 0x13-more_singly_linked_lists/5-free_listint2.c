@@ -2,7 +2,7 @@
 
 /**
  * free_listint2 - main function
- * @head: The pointer address to header node.
+ * @head: The address of pointer to first node.
  *
  * Description: This function frees a listint_t list (2).
  *
