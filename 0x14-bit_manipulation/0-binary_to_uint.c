@@ -12,7 +12,7 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int container = 0, i = 0, mul = 1;
 
-	if (!b)
+	if (b == NULL)
 	{
 		return (0);
 	}
@@ -26,7 +26,10 @@ unsigned int binary_to_uint(const char *b)
 		i++;
 	}
 	i = 0;
-	i = strlen(b);
+        while(b[i])
+	{
+		i++;
+	}
 
 	while (i > 0)
 	{
