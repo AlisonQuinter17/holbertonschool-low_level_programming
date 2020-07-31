@@ -12,18 +12,18 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int c = 0, sum = 1, i = 0;
-	int lim = 63;
+	unsigned long int c = 0, i = 0;
+	int index = 31;
 
 	c = n ^ m;
 
-	while (lim >= 0)
+	while (index >= 0)
 	{
-		if (c & sum << lim)
+		if ((c & (1 << index)) != 0)
 		{
 			i++;
 		}
-		lim--;
+		index--;
 	}
 	return (i);
 }
