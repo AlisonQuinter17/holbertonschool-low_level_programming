@@ -7,7 +7,7 @@
  */
 int main(int ac, char **av)
 {
-    int res;
+    int res; 
 
     if (ac != 3)
     {
