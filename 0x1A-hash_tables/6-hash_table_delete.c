@@ -25,8 +25,6 @@ void hash_table_delete(hash_table_t *ht)
 			list = list->next;
 			free(tem->key);
 			free(tem->value);
-			list->key = NULL;
-			list->value = NULL;
 			free(tem);
 		}
 	}
