@@ -16,7 +16,7 @@ SRC = main.c holberton.c
 OBJ = $(patsubst %.c,%.o,$(SRC))
 NAME = holberton
 .PHONY : all clean oclean fclean re
-all: $(OBJ) m.h
+all: m.h $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 clean:
 	$(RM) *~ $(NAME)
