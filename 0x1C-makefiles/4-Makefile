@@ -17,7 +17,7 @@ OBJ = $(patsubst %.c,%.o,$(SRC))
 NAME = holberton
 RM = rm -f
 all: $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 clean:
 	$(RM) *~ $(NAME)
 oclean:
@@ -25,4 +25,4 @@ oclean:
 fclean:
 	$(RM) *~ $(NAME) $(OBJ)
 re: oclean $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
