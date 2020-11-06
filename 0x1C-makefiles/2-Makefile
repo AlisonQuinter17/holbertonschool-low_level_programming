@@ -1,0 +1,11 @@
+# CC: the compiler to be used
+# SRC: the .c files
+# OBJ: the .o files
+# NAME: the name of the executable
+# patsubst: Acts as a wildcard replacing the text.
+CC = gcc
+SRC = main.c holberton.c
+OBJ = $(patsubst %.c,%.o,$(SRC))
+NAME = holberton
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
