@@ -1,0 +1,28 @@
+# CC: the compiler to be used.
+# CFLAGS: your favorite compiler flags: -Wall -Werror -Wextra -pedantic.
+# SRC: the .c files.
+# OBJ: the .o files.
+# NAME: the name of the executable.
+# RM: the program to delete files.
+# patsubst: Acts as a wildcard replacing the text.
+# all: builds your executable.
+# clean: deletes all Emacs and Vim temporary files along with the executable.
+# oclean: deletes the object files.
+# fclean: deletes the Emacs temporary files, the executable, and the object files.
+# re: forces recompilation of all source files.
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra -pedantic
+SRC = main.c holberton.c
+OBJ = $(patsubst %.c,%.o,$(SRC))
+NAME = holberton
+RM = rm -f
+all: $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+clean:
+	$(RM) *~ $(NAME)
+oclean:
+	$(RM) $(OBJ)
+fclean:
+	$(RM) *~ $(NAME) $(OBJ)
+re: oclean $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
